@@ -12,7 +12,7 @@ class TestTodoList < MiniTest::Unit::TestCase
   def test_todolist_add
     @test_todolist.add(@test_todo1)
     @test_todolist.add(@test_todo2)
-    expected_result = [@test_todo1,@test_todo2]
+    expected_result = [@test_todo1, @test_todo2]
 
     assert_equal expected_result, @test_todolist.todolist
   end

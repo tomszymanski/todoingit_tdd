@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 group :development do
   gem 'json'
@@ -8,4 +8,8 @@ end
 group :development, :test do
   gem 'minitest'
   gem 'simplecov'
+end
+
+group :test do
+  gem 'codeclimate-test-reporter', require: nil
 end
