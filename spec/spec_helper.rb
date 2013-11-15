@@ -1,5 +1,5 @@
-require 'codeclimate-test-reporter'
-CodeClimate::TestReporter.start
+# require 'codeclimate-test-reporter'
+# CodeClimate::TestReporter.start
 
 require File.expand_path '../../lib/todo.rb', __FILE__
 require File.expand_path '../../lib/todolist.rb', __FILE__
