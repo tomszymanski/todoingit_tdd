@@ -3,21 +3,44 @@ GEM
   specs:
     codeclimate-test-reporter (0.1.1)
       simplecov (>= 0.7.1, < 1.0.0)
+    coderay (1.0.9)
+    formatador (0.2.4)
+    guard (1.7.0)
+      formatador (>= 0.2.4)
+      listen (>= 0.6.0)
+      lumberjack (>= 1.0.2)
+      pry (>= 0.9.10)
+      thor (>= 0.14.6)
+    guard-minitest (0.5.0)
+      guard (>= 0.4)
     json (1.8.1)
+    listen (0.7.3)
+    lumberjack (1.0.3)
+    method_source (0.8.2)
     minitest (4.7.5)
     multi_json (1.8.2)
+    pry (0.9.12.2)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     rake (10.1.0)
+    rb-fsevent (0.9.3)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
+    slop (3.4.6)
+    thor (0.18.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   codeclimate-test-reporter
+  guard
+  guard-minitest
   json
   minitest
   rake
+  rb-fsevent
   simplecov

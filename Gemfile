@@ -6,7 +6,10 @@ group :development do
 end
 
 group :development, :test do
+  gem 'guard'
+  gem 'guard-minitest'
   gem 'minitest'
+  gem 'rb-fsevent'
   gem 'simplecov'
 end
 
