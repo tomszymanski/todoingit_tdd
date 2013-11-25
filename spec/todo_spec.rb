@@ -1,11 +1,14 @@
-require File.expand_path '../spec_helper.rb', __FILE__
+require File.expand_path '../test_helper.rb', __FILE__
 
-class TestTodo < MiniTest::Unit::TestCase
-  def setup
+describe Todo do
+  before do
     @todo_description = 'Bring Back That Loving Feeling'
     @test_todo = Todo.new(@todo_description)
   end
-  def test_todo
-    assert_equal @todo_description, @test_todo.description   
+
+  describe '#new' do
+    it 'returns a description from initialization' do
+      assert_equal @todo_description, @test_todo.description
+    end
   end
 end

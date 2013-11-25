@@ -1,5 +1,5 @@
-# A sample Guardfile
-# More info at https://github.com/guard/guard#readme
+notification :gntp, :sticky => true, :host => '192.168.1.2', :password => 'growlme'
+
 guard 'minitest', :test_folders => 'spec', :test_file_patterns => '*_spec.rb' do
   watch(%r|^spec/(.+)_spec\.rb|)
 

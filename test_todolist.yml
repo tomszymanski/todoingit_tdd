@@ -1,4 +1,0 @@
---- !ruby/object:TodoList
-todolist:
-- !ruby/object:Todo
-  description: Top Gun

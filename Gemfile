@@ -9,6 +9,8 @@ group :development, :test do
   gem 'guard'
   gem 'guard-minitest'
   gem 'minitest'
+  gem 'minitest-reporters'
+  gem 'ruby_gntp'
   gem 'rb-fsevent'
   gem 'simplecov'
 end

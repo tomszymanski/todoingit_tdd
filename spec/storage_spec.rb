@@ -1,9 +1,9 @@
-require File.expand_path '../spec_helper.rb', __FILE__
+require File.expand_path '../test_helper.rb', __FILE__
 
-class TestStorage < MiniTest::Unit::TestCase
-  def setup
+describe Storage do
+  before do
     @test_store_content = 'test_todolist.yml'
-    @test_store_file = File.new(@test_store_content)
+    @test_store_file = File.open(@test_store_content, 'w')
     @test_store = Storage.new(@test_store_content)
 
     @test_todolist = TodoList.new
@@ -13,13 +13,23 @@ class TestStorage < MiniTest::Unit::TestCase
     
     @test_store_expected = @test_todolist.to_yaml
   end
-  def test_save
-    @test_store.save(@test_todolist)
-    file = File.open(@test_store_content, 'rb')
 
-    assert_equal @test_store_expected, file.read
+  describe '#new' do
+    it 'returns a storage name from initialization' do
+      assert_equal @test_store_content, @test_store.storage_name
+    end
   end
-  def cleanup
-    File.delete(@test_store_content)
+
+  describe '#save' do
+    it 'saves a todolist to a file' do
+      @test_store.save(@test_todolist)
+      file = File.open(@test_store_content, 'rb')
+
+      assert_equal @test_store_expected, file.read
+    end
+    
+    after do
+      File.delete(@test_store_content)
+    end
   end
 end
